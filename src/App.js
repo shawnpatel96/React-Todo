@@ -39,7 +39,7 @@ class App extends React.Component {
     this.setState({tasks});
   };
   
-  changeTask = e => this.setState({[e.target.name]: e.target.value});
+ 
 
   clear = e => {
     e.preventDefault();
@@ -54,7 +54,7 @@ class App extends React.Component {
           <h1>Welcome to your Todo App!</h1>
           <ToDoForm 
             value={this.state.task}
-            handleChange={this.changeTask}
+            handleChange={e=> this.setState({[e.target.name]: e.target.value})}  // if more than one  set event to variable like so || changeTask = e => this.setState({[e.target.name]: e.target.value});
             handleAdd={this.addTask}
             handleClear={this.clear}
           />
