@@ -1,8 +1,10 @@
 import React from 'react';
 
 const ToDoForm = props => {
+    console.log('rendering form');
     return(
         <form>
+            
             <input 
                 onChange={props.handleChange}
                 type="text"
