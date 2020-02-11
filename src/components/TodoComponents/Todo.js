@@ -1,13 +1,13 @@
 import React from 'react';
-
+import {Card} from "../TodoStyle"
 const Item = props => {
     return(
-        <div
+        <Card
         style={{textDecoration:props.item.completed ? 'line-through': ""}}
             onClick={() => props.handleToggle(props.item.id)}
         >
             <p>{props.item.task}</p>
-        </div>
+        </Card>
     )
 };
 
