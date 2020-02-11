@@ -1,21 +1,21 @@
 import React from 'react';
-
-const ToDoForm = props => {
+import {Button, Input} from "../TodoStyle"
+const TaskForm = props => {
     console.log('rendering form');
     return(
         <form>
             
-            <input 
+            <Input 
                 onChange={props.handleChange}
                 type="text"
                 name="task"
                 value={props.value}
                 placeholder="...tasks"
             />
-            <button onClick={props.handleAdd}>Add</button>
-            <button onClick={props.handleClear}>Clear</button>
+            <Button onClick={props.handleAdd}>Add</Button>
+            <Button onClick={props.handleClear}>Clear</Button>
         </form>
     )
 };
 
-export default ToDoForm;
+export default TaskForm;

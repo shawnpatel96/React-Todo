@@ -1,6 +1,6 @@
 import React from 'react';
-import ToDoList from './components/TodoComponents/TodoList';
-import ToDoForm from './components/TodoComponents/TodoForm'
+import TaskList from './components/TodoComponents/TodoList';
+import TaskForm from './components/TodoComponents/TodoForm'
 
 class App extends React.Component {
   // you will need a place to store your state in this component.
@@ -50,15 +50,15 @@ class App extends React.Component {
   render() {
     console.log('rendering...');
     return (
-          <div>
+          <div className="App">
           <h1>Welcome to your Todo App!</h1>
-          <ToDoForm 
+          <TaskForm 
             value={this.state.task}
             handleChange={e=> this.setState({[e.target.name]: e.target.value})}  // if more than one  set event to variable like so || changeTask = e => this.setState({[e.target.name]: e.target.value});
             handleAdd={this.addTask}
             handleClear={this.clear}
           />
-          <ToDoList 
+          <TaskList 
           handleToggle={this.handleToggle}
           tasks={this.state.tasks}
         />

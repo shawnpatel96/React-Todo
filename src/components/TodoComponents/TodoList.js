@@ -3,7 +3,8 @@
 import React from 'react';
 import Item from "./Todo";
 
-const ToDoList = props => {
+
+const TaskList = props => {
     return(
         <div className="task-list">
             {props.tasks.map((item) => (
@@ -17,4 +18,4 @@ const ToDoList = props => {
     )
 };
 
-export default ToDoList;
+export default TaskList;
